@@ -14,7 +14,7 @@ export default function Chatbot() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://us-central1-YOUR_PROJECT.cloudfunctions.net/chatbot", {
+      const res = await fetch("https://alumni-chatbot-api.vercel.app/api/chatbot", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
