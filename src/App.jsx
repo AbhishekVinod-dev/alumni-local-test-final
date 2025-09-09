@@ -9,7 +9,8 @@ import Mentorship from './pages/Mentorship'
 import Fundraising from './pages/Fundraising'
 import Newsletter from './pages/Newsletter'
 import AuthPage from './pages/Auth'
-import Payments from "./pages/Payments";
+import Payments from './pages/Payments'
+import Chatbot from './pages/Chatbot'
 
 import Announcements from "./pages/Announcement";
 
@@ -37,6 +38,7 @@ export default function App(){
           <Route path="/register" element={<Register />} />
           <Route path="/payments" element={<Payments />} />
           <Route path="/announcements" element={<Announcements />} />
+          <Route path="/chatbot" element={<Chatbot />} />
 
           
         </Routes>

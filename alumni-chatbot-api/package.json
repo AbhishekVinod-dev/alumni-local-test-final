@@ -1,0 +1,11 @@
+{
+  "name": "alumni-chatbot-api",
+  "version": "1.0.0",
+  "main": "api/chatbot.js",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2",
+    "firebase-admin": "^11.10.1",
+    "openai": "^4.0.0"
+  }
+}
