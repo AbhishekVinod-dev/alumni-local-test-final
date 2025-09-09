@@ -53,13 +53,12 @@
 // });
 
 // export default app;
-import express from "express";
 import { initializeApp, cert } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 import OpenAI from "openai";
+import cors from "cors";
+app.use(cors());
 
-const app = express();
-app.use(express.json());
 
 // 🔹 Firebase setup
 const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
@@ -73,7 +72,11 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
-app.post("/api/chatbot", async (req, res) => {
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
   try {
     const { message } = req.body;
 
@@ -110,12 +113,10 @@ app.post("/api/chatbot", async (req, res) => {
     });
 
     const reply = completion.choices[0].message.content;
-    res.json({ reply });
+    res.status(200).json({ reply });
 
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Chatbot error" });
   }
-});
-
-export default app;
+}
