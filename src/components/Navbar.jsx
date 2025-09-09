@@ -16,6 +16,7 @@ export default function Navbar() {
         <NavLink to="/mentorship" className={({ isActive }) => isActive ? "text-white font-bold" : "text-gray-400"}>Mentorship</NavLink>
         <NavLink to="/fundraising" className={({ isActive }) => isActive ? "text-white font-bold" : "text-gray-400"}>Fundraising</NavLink>
         <NavLink to="/newsletter" className={({ isActive }) => isActive ? "text-white font-bold" : "text-gray-400"}>Newsletter</NavLink>
+        <NavLink to="/chatbot" className={({ isActive }) => isActive ? "text-white font-bold" : "text-gray-400"}>Chatbot</NavLink>
       </nav>
       <div className="flex gap-4 items-center">
         {user ? (

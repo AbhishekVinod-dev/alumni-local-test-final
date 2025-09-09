@@ -11,8 +11,7 @@ import Newsletter from './pages/Newsletter'
 import AuthPage from './pages/Auth'
 import Payments from './pages/Payments'
 import Chatbot from './pages/Chatbot'
-
-import Announcements from "./pages/Announcement";
+import Announcements from "./pages/Announcement"
 
 
 
