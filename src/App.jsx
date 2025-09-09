@@ -10,7 +10,7 @@ import Fundraising from './pages/Fundraising'
 import Newsletter from './pages/Newsletter'
 import AuthPage from './pages/Auth'
 import Payments from './pages/Payments'
-import Chatbot from './pages/Chatbot'
+import Chatbot from './pages/chatbot'
 import Announcements from "./pages/Announcement"
 
 
